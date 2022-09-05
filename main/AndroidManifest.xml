@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cms.dw202app_all"
+    android:installLocation="preferExternal">
+
+    <!-- 외부 URL로부터 동영상을 스트리밍하기 위한 권한. -->
+
+    <uses-permission android:name="android.permission.INTERNET">
+    </uses-permission>
+    <!-- 재생중 화면 어두워짐, 잠김 방지하기 위한 권한. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Dw202app_all"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LogoActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Ex1AnimationActivity"/>
+        <activity android:name=".Ex2GifActivity"/>
+        <activity android:name=".Ex3VideoActivity"></activity>
+        <activity android:name=".Ex4AudioActivity"></activity>
+        <activity android:name=".Ex5WebViewActivity"/>
+        <activity android:name=".Ex5WebViewExYoutube"/>
+        <activity android:name=".Ex5WebViewExGoogle"/>
+        <activity android:name=".Ex5WebViewExNaver"/>
+        <activity android:name=".Ex6TelActivity"></activity>
+        <activity android:name=".Ex7SmsActivity"></activity>
+        <activity android:name=".Ex8GalleryViewEx"></activity>
+    </application>
+
+
+</manifest>
